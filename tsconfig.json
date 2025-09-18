@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                         // Modern JavaScript features
+    "module": "CommonJS",                       // Node.js compatibility
+    "lib": ["ESNext", "DOM"],                   // Browser + modern JS APIs
+    "moduleResolution": "node",                 // Resolve modules like Node
+    "esModuleInterop": true,                    // Allow default imports from CommonJS
+    "skipLibCheck": true,                       // Skip type checking on node_modules
+    "forceConsistentCasingInFileNames": true,   // Prevent case mismatch issues
+    "strict": true,                             // Enable all strict type-checking options
+    "outDir": "dist",                           // Output directory (if compiling manually)
+    "baseUrl": ".",                             // Base directory for non-relative imports
+    "paths": {
+      "@pages/*": ["pages/*"],
+      "@tests/*": ["tests/*"],
+      "@utils/*": ["utils/*"],
+      "@fixtures/*": ["fixtures/*"]
+    },
+    "types": ["playwright", "node"]                     // Ensure Playwright types are available globally
+  },
+  "include": [
+    "tests/**/*.ts",
+    "pages/**/*.ts",
+    "utils/**/*.ts",
+    "fixtures/**/*.ts",
+    "playwright.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

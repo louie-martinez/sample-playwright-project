@@ -1,5 +1,5 @@
 import { Page, Locator } from '@playwright/test';
-
+ 
 export class HomePage {
   // Page object's URL property
   readonly page: Page;
